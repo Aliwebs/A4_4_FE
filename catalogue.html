@@ -1,0 +1,202 @@
+<!--start html tag and get the basic html structure-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results:</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        a {
+            /* gets rid of the underline in the links text */
+            text-decoration: none;
+            color: black;
+        }
+
+        /* first off we are going to style the navbar*/
+        ul {
+            /* this gets rid of the bullet points in the list items */
+            list-style: none;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul li {
+            /* this makes the items of the navbar inline rather than a column */
+            display: inline;
+            float: left;
+        }
+
+        ul li a {
+            display: block;
+            /* gives some space around the links */
+            padding: 20px;
+            /* give white color to text */
+            color: white;
+        }
+
+        nav a:hover {
+            background-color: green;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        form input {
+            margin: 2%;
+            width: 70%;
+            padding: 10px;
+        }
+
+        form button {
+            padding: 10px;
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+        form button:hover {
+            cursor: pointer;
+        }
+
+        .center {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        #logo {
+            margin: 0 auto;
+            width: 310px;
+        }
+
+        #items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            text-align: center;
+            margin: 10px;
+            width: 20%;
+            border: black 2px solid;
+        }
+
+        .item * {
+            margin: 10px 0;
+        }
+
+        .item img {
+            width: 100%;
+        }
+
+        .social-platforms {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-platforms img {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Deals</a></li>
+            </ul>
+        </nav>
+        <!--Add a form here with one input, which has a placeholder text of 'search...'-->
+        <form>
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </form>
+        <!--Add a logo here, ie and image tag with src="logo.png" for now-->
+        <section class="center">
+            <div id="logo">
+                <img src="logo.png">
+            </div>
+        </section>
+
+
+
+    </header>
+    <section id="items">
+
+        <!--add a div here-->
+        <div class="item">
+            <a href="#">
+                <h4> Hogwarts Legacy</h4>
+                <img src="image.jpg">
+            </a>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin vel ipsum at euismod.
+                Praesent pulvinar elementum ante eu consequat. Etiam id metus sollicitudin, scelerisque urna non,
+                commodo sapien. Ut tincidunt ullamcorper sapien ut vehicula. Aenean accumsan, felis non molestie
+                sollicitudin, augue nunc dictum ligula, non laoreet mauris enim blandit velit. Phasellus non sagittis
+                nibh. Fusce nec mi magna. </p>
+        </div>
+        <div class="item">
+            <a href="#">
+                <h4> Hogwarts Legacy</h4>
+                <img src="image.jpg">
+            </a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin vel ipsum at euismod.
+                Praesent pulvinar elementum ante eu consequat. Etiam id metus sollicitudin, scelerisque urna non,
+                commodo sapien. Ut tincidunt ullamcorper sapien ut vehicula. Aenean accumsan, felis non molestie
+                sollicitudin, augue nunc dictum ligula, non laoreet mauris enim blandit velit. Phasellus non sagittis
+                nibh. Fusce nec mi magna. </p>
+        </div>
+        <div class="item">
+            <a href="#">
+                <h4> Hogwarts Legacy</h4>
+                <img src="image.jpg">
+            </a>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin vel ipsum at euismod.
+                Praesent pulvinar elementum ante eu consequat. Etiam id metus sollicitudin, scelerisque urna non,
+                commodo sapien. Ut tincidunt ullamcorper sapien ut vehicula. Aenean accumsan, felis non molestie
+                sollicitudin, augue nunc dictum ligula, non laoreet mauris enim blandit velit. Phasellus non sagittis
+                nibh. Fusce nec mi magna. </p>
+        </div>
+    </section>
+
+    <footer>
+
+        <ul class="social-platforms">
+            <li>
+                <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.twiter.com/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
