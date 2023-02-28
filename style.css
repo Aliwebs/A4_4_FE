@@ -1,0 +1,24 @@
+nav {
+    width: 70%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul li {
+    width: 10%;
+
+}
+
+nav li a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: black;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1;
+}
