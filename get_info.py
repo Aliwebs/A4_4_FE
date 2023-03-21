@@ -1,5 +1,6 @@
 import requests, json
 from bs4 import BeautifulSoup
+from datetime import date
 
 ### Steam scrape code ###
 
@@ -13,8 +14,19 @@ def STEAMget_info(URL):
     print(price.text.strip())
     print(name.text)
     print("Steam")
+    print(description.text)
 
-    return price.text.strip(), name.text, 'Steam', description
+    return price.text.strip(), name.text, 'Steam', description.text
+
+def fanatical_info(URL):
+    page = requests.get(URL)
+    soup = BeautifulSoup(page.text, "html.parser")
+    #print(soup)
+    price = soup.find("span", class_="current-price")
+    name = soup.find("h1", class_="property-view human_name-view js-admin-edit")
+    print(price)
+    print(name)
+    return price, name
 
 
 ### CDKeys code ###
@@ -37,13 +49,18 @@ def CDKEYget_info(URL):
     #return these values ^^^^
 
 
-def addDict(Dict, Main_Dict, price, title, platform, URL):
+def addDict(Dict, Main_Dict, Steamprice, CDKeysPrice, title, platform, SteamURL, CDKEYSURL, desc):
     Dict['name'] = title
-    Dict['price'] = price
+    Dict['prices'] = []
+    Dict['prices'] = Steamprice
+    Dict['prices'] = [Dict['prices']]
+    Dict['prices'].append(CDKeysPrice)
     Dict['platform'] = platform
-    Dict['URL'] = URL
-    Dict['Description'] = "x"
-    Main_Dict[title]= Dict
+    Dict['URL'] = CDKEYSURL
+    Dict['URL'] = [Dict['URL']]
+    Dict['URL'].append(SteamURL)
+    Dict['Description'] = desc
+    Main_Dict[title] = Dict
 
 
 
@@ -61,8 +78,9 @@ def write_info(price, title, platform):
 
 ### json from - https://stackoverflow.com/questions/7100125/storing-python-dictionaries###
 
-def write_json(Dict):
-    with open('data.json', 'w') as fp:
+def write_json(Dict, title):
+    today = str(date.today())
+    with open(title+today+".json", 'w') as fp:
         #data = json.loads(fp)
         #data.append(Dict)
         json.dump(Dict, fp, indent=6)
@@ -71,6 +89,7 @@ def write_json(Dict):
 
 
 def update_json(Dict, title):
+
     with open('data.json', 'r') as fp:
         data = json.load(fp)
         fp.close()
