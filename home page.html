@@ -2,29 +2,165 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="Website.css"> 
         <script src="home page code.js"></script>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page:</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Website.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        a {
+            /* gets rid of the underline in the links text */
+            text-decoration: none;
+            color: black;
+        }
+
+        /* first off we are going to style the navbar*/
+        ul {
+            /* this gets rid of the bullet points in the list items */
+            list-style: none;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul li {
+            /* this makes the items of the navbar inline rather than a column */
+            display: inline;
+            float: left;
+        }
+
+        ul li a {
+            display: block;
+            /* gives some space around the links */
+            padding: 20px;
+            /* give white color to text */
+            color: white;
+        }
+
+        nav a:hover {
+            background-color: green;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        form input {
+            margin: 2%;
+            width: 70%;
+            padding: 10px;
+        }
+
+        form button {
+            padding: 10px;
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+        form button:hover {
+            cursor: pointer;
+        }
+
+        .center {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        #logo {
+            margin: 0 auto;
+            width: 310px;
+        }
+
+        #items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            text-align: center;
+            margin: 10px;
+            width: 20%;
+            border: black 2px solid;
+        }
+
+        .item * {
+            margin: 10px 0;
+        }
+
+        .item img {
+            width: 100%;
+        }
+
+        .social-platforms {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-platforms img {
+            width: 50px;
+        }
+    </style>
     </head>
 
     <body>
-        <ul id="menu">
-            <li>Home </li>
-            <li>Catalogue </li>
-            <li>Deals</li>
-        </ul>
-
-        <!--Add a form here with one input, which has a placeholder text of 'search...'-->
-        <form>
-            <input type="text" placeholder="Search...">
-            <button type="button" id="Search_button">Search</button>
-        </form>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="file:///C:/Users/kasib/OneDrive/Desktop/A4_4_FE/home%20page.html">Home</a></li>
+                    <li><a href="file:///C:/Users/kasib/OneDrive/Desktop/A4_4_FE/catalogue.html">Catalogue</a></li>
+                    <li><a href="#">Deals</a></li>
+                </ul>
+            </nav>
+            <!--Add a form here with one input, which has a placeholder text of 'search...'-->
+            <form>
+                <input type="text" placeholder="Search...">
+                <button type="button" id="Search_button">Search</button>
+            </form>
+            <!--Add a logo here, ie and image tag with src="logo.png" for now-->
+            <section class="center">
+                <div id="logo">
+                    <img src="logo.png">
+                </div>
+            </section>
+    
+    
+    
+        </header>
         <hr/>
         <div class="trending">
             <h3>Trending</h3>
         </div>
 
         <footer>
-            
+            <ul class="social-platforms">
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
         </footer>
 
         
