@@ -1,4 +1,10 @@
-nav {
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav {
     width: 70%;
     margin: 0 auto;
 }
@@ -21,4 +27,163 @@ nav li a {
     color: black;
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
     line-height: 1;
+} */
+
+
+.game {
+    float: left;
+    margin-top: 5%;
+    width: 35%;
+    display: flexbox;
+    align-content: space-around;
+}
+
+.Description {
+    width: 60%;
+    float: right;
+    margin-top: 5%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.Comparison {
+    list-style: none;
+    float: none;
+    margin-top: 20%;
+    border-radius: 2px black;
+}
+
+nav ul {
+    /* this gets rid of the bullet points in the list items */
+    list-style: none;
+    background-color: black;
+    overflow: hidden;
+}
+
+nav ul li {
+    /* this makes the items of the navbar inline rather than a column */
+    display: inline;
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    /* gives some space around the links */
+    padding: 20px;
+    /* give white color to text */
+    color: white;
+    /* remove underline */
+    text-decoration: none;
+}
+
+#menu {
+    margin-top: 0;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: black;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    display: flex;
+    color: antiquewhite;
+
+}
+
+#menu li {
+    padding: 1%;
+}
+
+#tag {
+    display: inline;
+    list-style: none;
+}
+
+form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+form input {
+    margin: 2%;
+    width: 70%;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+main section {
+    display: flex;
+    margin: 10px;
+}
+
+aside {
+    width: 40%;
+}
+
+
+
+aside li {
+    display: flex;
+
+    list-style-type: none;
+}
+
+aside li * {
+    margin: 10px;
+}
+
+#slideshow {
+    width: 60%;
+    position: relative;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.slideshow-controls {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#previous {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+
+#next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+
+#games {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#games div {
+    font-size: 14px;
+    margin: 10px;
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script defer src="https://kit.fontawesome.com/59d7e7a87e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="slideshow(0)">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./homePage.html">Home</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Deals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="slideshow">
+                <button onclick="moveSlide(-1)">
+                    <i id="previous" class="fa-solid fa-angle-left slideshow-controls"></i>
+                </button>
+                <div id="image-container">
+                    <img src="#" alt="">
+                </div>
+                <button onclick="moveSlide(+1)">
+                    <i id="next" class="fa-solid fa-angle-right slideshow-controls"></i>
+                </button>
+
+            </div>
+            <aside>
+                <h1 id="name"></h1>
+                <h3 id="description"></h3>
+                <h4 id="platform"></h4>
+                <ul id="sellers">
+
+                </ul>
+            </aside>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
